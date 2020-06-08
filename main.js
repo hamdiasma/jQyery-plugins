@@ -10,7 +10,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("html,body").animate(
       {
-        scrollTop: $(`#${$(this).data("scroll")}`).offset().top+1,
+        scrollTop: $(`#${$(this).data("scroll")}`).offset().top + 1,
       },
       1000
     );
@@ -27,24 +27,32 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
-  // think navbar with sections
   $(window).scroll(function () {
-    // $(".div").each(function () {
-    //   if ($(window).scrollTop() > $(this).offset().top) {
-    //     console.log($(this).attr("id"));
-    //     var divId = $(this).attr("id");
-    //     $(".navbar li a").removeClass("active");
-    //     $(`.navbar li a[data-scroll=${divId}]`).addClass("active");
-    //   }
-    // });
-
+    // think navbar with sections
     $(".div").each(function () {
       if ($(window).scrollTop() > $(this).offset().top) {
-        // console.log($(this).attr("id"));
-        var div = $(this).attr("id");
+        console.log($(this).attr("id"));
+        var divId = $(this).attr("id");
         $(".navbar li a").removeClass("active");
-        $(".navbar li a[data-scroll='" + div + "']").addClass("active");
+        $(`.navbar li a[data-scroll=${divId}]`).addClass("active");
       }
+    });
+    // button up scroll top
+    var scrollUp = $(".up");
+    if ($(window).scrollTop() > 500) {
+      if (scrollUp.is(":hidden")) {
+        scrollUp.fadeIn(500);
+      }
+    } else {
+      scrollUp.fadeOut(500);
+    }
+    $(".up").click(function () {
+      $("html,body").animate(
+        {
+          scrollTop: 0,
+        },
+        1000
+      );
     });
   });
 });

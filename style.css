@@ -29,7 +29,7 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.navbar ul li a.active{
+.navbar ul li a.active {
   color: #009688;
 }
 .div {
@@ -41,4 +41,18 @@ body {
 }
 .div h2 {
   margin-top: 0;
+}
+
+/* up */
+.up {
+  position: fixed;
+  bottom: 3px;
+  right: 3px;
+  cursor: pointer;
+  display: none;
+  background-color: #333;
+  color: #ccc;
+  border-radius: 50% 50% 0 0;
+  outline: none;
+  border: none;
 }
