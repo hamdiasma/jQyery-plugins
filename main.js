@@ -55,4 +55,19 @@ $(document).ready(function () {
       );
     });
   });
+  // show Popup
+  var pop = $(".popup");
+  $(".showPopup").click(function () {
+    pop.fadeIn(500);
+    pop.click(function () {
+      pop.fadeOut(500);
+    });
+    $(".inner").click(function (e) {
+      e.stopPropagation();
+    });
+    $(".close").click(function (e) {
+      e.preventDefault();
+      pop.fadeOut(500);
+    });
+  });
 });

@@ -56,3 +56,44 @@ body {
   outline: none;
   border: none;
 }
+
+/* popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+.popup .inner {
+  background-color: #ccc;
+  border: 1px solid #777;
+  height: 300px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+}
+.showPopup {
+  border-radius: 10px;
+  height: 60px;
+  width: 100px;
+  outline: none;
+  border: 2px solid #333;
+  cursor: pointer;
+  margin-top: 100px;
+}
