@@ -329,7 +329,7 @@ button.from-top span:first-child {
 .products .product h5 {
   margin: 5px 0;
 }
-.products .product img{
+.products .product img {
   width: 100%;
   height: 100px;
 }
@@ -337,7 +337,7 @@ button.from-top span:first-child {
   display: block;
   color: #888;
   font-size: 15px;
-  margin: 0 0 4px ;
+  margin: 0 0 4px;
 }
 .products .product i {
   display: block;
@@ -351,6 +351,105 @@ button.from-top span:first-child {
   display: none;
 }
 /* end product */
+
+/* start gris */
+.gid-list {
+  width: 50%;
+  margin: 0 auto;
+  text-align: right;
+}
+.gid-list i {
+  margin-left: 5px;
+  cursor: pointer;
+
+  padding: 2px;
+ 
+}
+.gid-list i.active{
+  border: 2px solid #333;
+
+}
+.grwids {
+ 
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 2px;
+}
+.grwids.grid-view .grwid {
+  /* gid*/
+  width: calc(92% / 4);
+  float: left;
+  padding: 10px;
+  margin: 1%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+
+}
+
+.grwids.grid-view .grwid h5 {
+  margin: 5px 0;
+}
+.grwids.grid-view .grwid img {
+  width: 100%;
+  height: 100px;
+}
+.grwids.grid-view .grwid span {
+  display: block;
+  color: #888;
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+.grwids.grid-view .grwid i {
+  display: block;
+  padding: 5px;
+  background-color: #777;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.grwids.grid-view .grwid p {
+  display: none;
+}
+
+.grwids.list-view .grwid {
+  /*list-view*/
+  height: 50px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.grwids.list-view .grwid h5 {
+  margin: -5px 0 0 50px;
+}
+.grwids.list-view .grwid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  padding: 1px;
+}
+.grwids.list-view .grwid span {
+  color: #888;
+  font-size: 15px;
+  margin-left: 50px;
+}
+.grwids.list-view .grwid i {
+  display: none;
+}
+.grwids.list-view .grwid p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+}
+
+/* end grids */
 
 /* strat colors bidy */
 [data-default-color="#8e44ad"] .skin-color {

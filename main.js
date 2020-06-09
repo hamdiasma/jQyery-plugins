@@ -208,13 +208,28 @@ $(document).ready(function () {
     } else {
       $(".thumbnails .active").prev().click();
     }
-
     // chek();
   });
   // chek();
 
   // toggle product discription
-  $(".product i").click(function () {
+  $(".product i ,.grwids .grwid i").click(function () {
     $(this).toggleClass("fa-plus fa-minus").next("p").slideToggle();
+  });
+
+  // listview/gridvie
+  $(".gid-list i").click(function () {
+    // if ($(this).hasClass("fa-th")) {
+    //   // console.log();
+    //   $(".grwids").removeClass("list-view").addClass("grid-view");
+    // } else {
+    //   if ($(this).hasClass("fa-list-ul")) {
+    //     $(".grwids").removeClass("grid-view").addClass("list-view");
+    //   }
+    // }
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".grwids")
+      .removeClass("list-view grid-view")
+      .addClass($(this).data("class"));
   });
 });
