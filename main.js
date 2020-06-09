@@ -120,12 +120,33 @@ $(document).ready(function () {
   );
   //progess
   $(".progress-bar span").each(function () {
-    $(this).fadeIn("fast").delay(1000)
+    $(this).fadeIn("fast").delay(1000);
     $(this).animate(
       {
         width: $(this).data("value"),
       },
       1000
     );
+  });
+  //fixed menue
+  var fixedMenue = $(".fixed-menue");
+  $("i.fa-gear").click(function () {
+    $(this).toggleClass("fa-spin");
+    fixedMenue.toggleClass("visible");
+    if (fixedMenue.hasClass("visible")) {
+      fixedMenue.animate(
+        {
+          left: 0,
+        },
+        600
+      );
+    } else {
+      fixedMenue.animate(
+        {
+          left: "-200px",
+        },
+        600
+      );
+    }
   });
 });

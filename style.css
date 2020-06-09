@@ -181,3 +181,27 @@ button.from-top span:first-child {
   width: 0;
   background-color: #965500;
 }
+/* fixed-menue */
+.fixed-menue {
+  position: fixed;
+  background-color: #333;
+  color: #eee;
+  top: 0;
+  left: -200px;
+  margin-left: 0;
+  width: 200px;
+  text-align: center;
+  z-index: 1000;
+  height: 100%;
+}
+.fixed-menue div:first-child {
+  background-color: #333;
+  position: absolute;
+  right: -26px;
+  top: 38px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+.fixed-menue div .fa-gear {
+  padding: 5px;
+}
