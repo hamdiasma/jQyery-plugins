@@ -212,4 +212,9 @@ $(document).ready(function () {
     // chek();
   });
   // chek();
+
+  // toggle product discription
+  $(".product i").click(function () {
+    $(this).toggleClass("fa-plus fa-minus").next("p").slideToggle();
+  });
 });
