@@ -13,11 +13,12 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: #eee;
   list-style: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   margin-left: 0;
+  z-index: 1000;
 }
 .navbar ul {
   text-align: center;
@@ -363,18 +364,16 @@ button.from-top span:first-child {
   cursor: pointer;
 
   padding: 2px;
- 
 }
-.gid-list i.active{
+.gid-list i.active {
   border: 2px solid #333;
-
 }
 .grwids {
- 
   margin: 20px auto;
   overflow: hidden;
   padding: 2px;
 }
+
 .grwids.grid-view .grwid {
   /* gid*/
   width: calc(92% / 4);
@@ -383,9 +382,6 @@ button.from-top span:first-child {
   margin: 1%;
   border: 1px solid #ccc;
   background-color: #fff;
-}
-
-
 }
 
 .grwids.grid-view .grwid h5 {
@@ -450,6 +446,42 @@ button.from-top span:first-child {
 }
 
 /* end grids */
+
+/* start error-message */
+
+.error-message {
+  width: 0;
+  background-color: #ccc;
+  margin: auto;
+  color: #fff;
+  background-color: red;
+  display: none;
+}
+.error-message h5 {
+  font-size: 20px;
+  padding: 5px 2px;
+}
+
+/* end error-message */
+/*startour form */
+.our-form {
+}
+.our-form input {
+  background-color: transparent;
+  display: block;
+  margin: 5px auto;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #CCC;
+}
+.our-form textarea {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #CCC;
+  background-color: transparent;
+}
+
+/*end our form */
 
 /* strat colors bidy */
 [data-default-color="#8e44ad"] .skin-color {

@@ -232,4 +232,28 @@ $(document).ready(function () {
       .removeClass("list-view grid-view")
       .addClass($(this).data("class"));
   });
+
+  // message erors
+  $(".error-message")
+    .fadeIn()
+    .animate(
+      {
+        width: "300px",
+        display: "block",
+      },
+      500,
+      function () {
+        $(this).delay(3000).fadeOut();
+      }
+    );
+  // form focus blur
+  var stocplat = "";
+  $("[placeholder]")
+    .focus(function () {
+      stocplat= $(this).attr("placeholder")
+      $(this).attr("placeholder", "");
+    })
+    .blur(function () {
+      $(this).attr("placeholder", stocplat);
+    });
 });
