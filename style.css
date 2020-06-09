@@ -15,10 +15,12 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  margin-left: 0;
 }
 .navbar ul {
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 .navbar li {
   display: inline-block;

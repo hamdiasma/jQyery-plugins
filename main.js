@@ -140,10 +140,22 @@ $(document).ready(function () {
         },
         600
       );
+      $("body").animate(
+        {
+          marginLeft:"200px"
+        },
+        600
+      );
     } else {
       fixedMenue.animate(
         {
           left: "-200px",
+        },
+        600
+      );
+      $("body").animate(
+        {
+          marginLeft: 0,
         },
         600
       );
