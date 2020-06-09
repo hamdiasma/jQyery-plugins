@@ -167,6 +167,15 @@ $(document).ready(function () {
   });
 
   // gallery selceted
+  var numbImage = $(".gallery .thumbnails").children().length;
+  var marginimg = 0.5;
+  var totalmargin = (numbImage - 1) * marginimg;
+  var imgWidth = (100 - totalmargin) / numbImage;
+  $(".gallery .thumbnails img").css({
+    width: imgWidth + "%",
+    marginRight: marginimg + "%",
+  });
+  console.log(imgWidth);
   function chek() {
     if ($(".thumbnails .active").is(":first-child")) {
       //   $(".gallery .masert-image .fa-chevron-left").hide();

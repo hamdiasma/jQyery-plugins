@@ -261,20 +261,20 @@ button.from-top span:first-child {
   height: 100%;
 }
 .gallery .masert-image .fa-chevron-left,
-.gallery .masert-image .fa-chevron-right{
+.gallery .masert-image .fa-chevron-right {
   position: absolute;
   top: 50%;
   transform: translateX(-50%);
-  background-color: #CCC;
+  background-color: #ccc;
   cursor: pointer;
   z-index: 2222;
   pad: 2px 5px;
   border-radius: 50%;
 }
-.gallery .masert-image .fa-chevron-left{
+.gallery .masert-image .fa-chevron-left {
   left: 20px;
 }
-.gallery .masert-image .fa-chevron-right{
+.gallery .masert-image .fa-chevron-right {
   right: 0;
 }
 .gallery .thumbnails {
@@ -284,7 +284,6 @@ button.from-top span:first-child {
 .gallery .thumbnails img {
   border: 2px solid #ccc;
   height: 100px;
-  width: calc(97% / 4);
   float: left;
   cursor: pointer;
   filter: gray;
@@ -300,8 +299,8 @@ button.from-top span:first-child {
   filter: none;
   filter: grayscale(0);
 }
-.gallery .thumbnails img:not(:last-child) {
-  margin-right: 1%;
+.gallery .thumbnails img:last-child {
+  margin-right: 0 !important;
 }
 /* end gallery */
 
