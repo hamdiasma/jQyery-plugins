@@ -162,8 +162,45 @@ $(document).ready(function () {
     }
   });
   // change colors
-  $(".change-color li").click(function(){
-    $("body").attr("data-default-color" ,$(this).data("color"))
-  })
- 
+  $(".change-color li").click(function () {
+    $("body").attr("data-default-color", $(this).data("color"));
+  });
+
+  // gallery selceted
+  function chek() {
+    if ($(".thumbnails .active").is(":first-child")) {
+      //   $(".gallery .masert-image .fa-chevron-left").hide();
+      // } else {
+      //   $(".gallery .masert-image .fa-chevron-left").show();
+      // }
+      // if ($(".thumbnails .active").is(":last-child")) {
+      //   $(".gallery .masert-image .fa-chevron-right").hide();
+      // } else {
+      //   $(".gallery .masert-image .fa-chevron-right").show();
+    }
+  }
+  $(".gallery .thumbnails img").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".masert-image img").hide().attr("src", $(this).attr("src")).fadeIn(500);
+    // chek();
+  });
+
+  $(".gallery .masert-image .fa-chevron-right").click(function () {
+    if ($(".thumbnails .active").is(":last-child")) {
+      $(".thumbnails img:first").click();
+    } else {
+      $(".thumbnails .active").next().click();
+    }
+    // chek();
+  });
+  $(".gallery .masert-image .fa-chevron-left").click(function () {
+    if ($(".thumbnails .active").is(":first-child")) {
+      $(".thumbnails img").last().click();
+    } else {
+      $(".thumbnails .active").prev().click();
+    }
+
+    // chek();
+  });
+  // chek();
 });
