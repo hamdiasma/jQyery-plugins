@@ -118,4 +118,14 @@ $(document).ready(function () {
       );
     }
   );
+  //progess
+  $(".progress-bar span").each(function () {
+    $(this).fadeIn("fast").delay(1000)
+    $(this).animate(
+      {
+        width: $(this).data("value"),
+      },
+      1000
+    );
+  });
 });
