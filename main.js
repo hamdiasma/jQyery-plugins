@@ -31,7 +31,7 @@ $(document).ready(function () {
     // think navbar with sections
     $(".div").each(function () {
       if ($(window).scrollTop() > $(this).offset().top) {
-        console.log($(this).attr("id"));
+        // console.log($(this).attr("id"));
         var divId = $(this).attr("id");
         $(".navbar li a").removeClass("active");
         $(`.navbar li a[data-scroll=${divId}]`).addClass("active");
@@ -142,7 +142,7 @@ $(document).ready(function () {
       );
       $("body").animate(
         {
-          marginLeft:"200px"
+          marginLeft: "200px",
         },
         600
       );
@@ -161,4 +161,9 @@ $(document).ready(function () {
       );
     }
   });
+  // change colors
+  $(".change-color li").click(function(){
+    $("body").attr("data-default-color" ,$(this).data("color"))
+  })
+ 
 });

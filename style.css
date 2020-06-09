@@ -145,7 +145,7 @@ button.from-top span:first-child {
 }
 .from-middle span:first-child {
   width: 0;
-  background-color: salmon;
+  background-color: #fa8072;
 }
 
 .progress-bar {
@@ -176,7 +176,7 @@ button.from-top span:first-child {
   width: 0;
 }
 .progress-bar.three span {
-  background-color: rgb(0, 90, 150);
+  background-color: #005a96;
   width: 0;
 }
 .progress-bar.four span {
@@ -207,3 +207,54 @@ button.from-top span:first-child {
 .fixed-menue div .fa-gear {
   padding: 5px;
 }
+
+.fixed-menue .change-color {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.fixed-menue .change-color li {
+  background-color: #fff;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.fixed-menue .change-color li:not(:first-child) {
+  margin-left: 5px;
+}
+
+.fixed-menue .change-color [data-color="#8e44ad"] {
+  background-color: #8e44ad;
+}
+.fixed-menue .change-color [data-color="#009688"] {
+  background-color: #009688;
+}
+.fixed-menue .change-color [data-color="#005a96"] {
+  background-color: #005a96;
+}
+.fixed-menue .change-color [data-color="#965500"] {
+  background-color: #965500;
+}
+.fixed-menue .change-color [data-color="#fa8072"] {
+  background-color: #fa8072;
+}
+/* strat colors bidy */
+[data-default-color="#8e44ad"] .skin-color{
+  color: #8e44ad;
+}
+[data-default-color="#009688"] {
+  color: #009688;
+}
+[data-default-color="#005a96"] {
+  color: #005a96;
+}
+[data-default-color="#965500"] {
+  color: #965500;
+}
+[data-default-color="#fa8072"] {
+  color: #fa8072;
+}
+/* end colors bidy */
