@@ -97,3 +97,51 @@ body {
   cursor: pointer;
   margin-top: 100px;
 }
+
+button.btn-effects {
+  border-radius: 10px;
+  height: 60px;
+  width: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 100px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+button.btn-effects span:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+button.btn-effects span:last-child {
+  position: relative;
+  z-index: 2;
+}
+button.from-left {
+  background-color: teal;
+}
+button.from-left span:first-child {
+  background-color: yellowgreen;
+  width: 0;
+  height: 100%;
+}
+
+button.from-top {
+  background-color: #8e44ad;
+}
+button.from-top span:first-child {
+  background-color: #9b59b6;
+  width: 100%;
+  height: 0;
+}
+.from-middle{
+  background-color: saddlebrown;
+}
+.from-middle span:first-child{
+ width: 0;
+ background-color: salmon;
+}

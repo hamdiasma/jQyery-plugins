@@ -39,21 +39,22 @@ $(document).ready(function () {
     });
     // button up scroll top
     var scrollUp = $(".up");
-    if ($(window).scrollTop() > 500) {
-      if (scrollUp.is(":hidden")) {
-        scrollUp.fadeIn(500);
-      }
+    if ($(this).scrollTop() > 500) {
+      // if (scrollUp.is(":hidden")) {
+      //   scrollUp.fadeIn(500);
+      // }
+      scrollUp.fadeIn(500);
     } else {
       scrollUp.fadeOut(500);
     }
-    $(".up").click(function () {
-      $("html,body").animate(
-        {
-          scrollTop: 0,
-        },
-        1000
-      );
-    });
+  });
+  $(".up").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
   });
   // show Popup
 
@@ -76,4 +77,45 @@ $(document).ready(function () {
       $(".popup").fadeOut(500);
     }
   });
+  // buttons effects
+  $("button.btn-effects").each(function () {
+    $(this).prepend("<span></span>");
+  });
+
+  $("button.from-left").hover(
+    function () {
+      $(this).find("span").eq(0).animate(
+        {
+          width: "100%",
+        },
+        100
+      );
+    },
+    function () {
+      $(this).find("span").eq(0).animate(
+        {
+          width: 0,
+        },
+        100
+      );
+    }
+  );
+  $("button.from-top").hover(
+    function () {
+      $(this).find("span").eq(0).animate(
+        {
+          height: "100%",
+        },
+        100
+      );
+    },
+    function () {
+      $(this).find("span").eq(0).animate(
+        {
+          height: 0,
+        },
+        100
+      );
+    }
+  );
 });
