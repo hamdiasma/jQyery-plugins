@@ -250,16 +250,35 @@ $(document).ready(function () {
   var stocplat = "";
   $("[placeholder]")
     .focus(function () {
-      stocplat= $(this).attr("placeholder")
+      stocplat = $(this).attr("placeholder");
       $(this).attr("placeholder", "");
     })
     .blur(function () {
       $(this).attr("placeholder", stocplat);
     });
-    // show message filed is empty
-    $(".our-form input,.our-form textarea").not(".our-form input[type='sybmit']").blur(function(){
+  // show message filed is empty
+  $(".our-form input,.our-form textarea")
+    .not(".our-form input[type='sybmit']")
+    .blur(function () {
       {
-        $(this).val()==""?$(this).next("span").css("color","red").fadeIn().delay(2000).fadeOut(): false
+        $(this).val() == ""
+          ? $(this)
+              .next("span")
+              .css("color", "red")
+              .fadeIn()
+              .delay(2000)
+              .fadeOut()
+          : false;
       }
-    })
+    });
+  // add astrisc to all required file
+  $(`<span class="astrisc">*</span>`).insertBefore(":input[required]");
+  $(".astrisc").parent("div").css("position", "relative");
+  $(".astrisc").each(function () {
+    $(this).css({
+      position: "absolute",
+      top: 0,
+      left: $(this).parent("div").find(":input").innerWidth() - 10,
+    });
+  });
 });
