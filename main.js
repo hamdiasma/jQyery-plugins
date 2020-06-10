@@ -373,8 +373,31 @@ $(document).ready(function () {
     //loop on element
     if ($(this).height() > maxHeiht) {
       maxHeiht = $(this).height();
-
     }
   });
-  $(".same-height div").height(maxHeiht)
+  $(".same-height div").height(maxHeiht);
+
+  // animate shuffle cartes
+  var zIndex = 0;
+  $(".carts .cart").click(function () {
+    $(this)
+      .animate(
+        {
+          left: "20%",
+          top: "20%",
+        },
+        1000,
+        function () {
+          zIndex--;
+          $(this).css("z-index", zIndex);
+        }
+      )
+      .animate(
+        {
+          left: $(this).css("left"),
+          top: "0",
+        },
+        1000
+      );
+  });
 });
