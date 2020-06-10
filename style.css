@@ -247,6 +247,9 @@ button.from-top span:first-child {
   background-color: #fa8072;
 }
 /* start solution */
+#solution > div{
+  position: relative;
+}
 #solution button.btn-effects.one {
   background-color: seagreen;
 }

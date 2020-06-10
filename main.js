@@ -323,7 +323,7 @@ $(document).ready(function () {
         : ($(this).css("direction", "rtl"), $(".astrisc").css("left", "0"));
     }
   });
-   
+
   // conver input value to tags
   $(".add-tag").on("keyup", function (e) {
     var keybordKey = e.keyCode || e.which;
@@ -340,7 +340,29 @@ $(document).ready(function () {
   });
   // remove tag on click
   $(".tags").on("click", ".tag-span i", function () {
-  $(this).parent().remove()
+    $(this).parent().remove();
   });
   // function bounce me
+  function bounceelement(paraselector, times, distance, speed) {
+    $(paraselector).on("click", function () {
+      for (var i = 0; i < times; i++) {
+        $(this)
+          .animate(
+            {
+              top: `-=${distance}`,
+            },
+            speed
+          )
+          .animate(
+            {
+              top: `+=${distance}`,
+            },
+            speed
+          );
+      }
+    });
+  }
+  bounceelement("#solution button.btn-effects.one", 3, 20, 500);
+  bounceelement("#solution button.btn-effects.two", 3, 20, 500);
+  bounceelement("#solution button.btn-effects.three", 3, 20, 500);
 });
