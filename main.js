@@ -365,4 +365,16 @@ $(document).ready(function () {
   bounceelement("#solution button.btn-effects.one", 3, 20, 500);
   bounceelement("#solution button.btn-effects.two", 3, 20, 500);
   bounceelement("#solution button.btn-effects.three", 3, 20, 500);
+
+  // just elemt text to be same
+
+  var maxHeiht = 0;
+  $(".same-height div").each(function () {
+    //loop on element
+    if ($(this).height() > maxHeiht) {
+      maxHeiht = $(this).height();
+
+    }
+  });
+  $(".same-height div").height(maxHeiht)
 });

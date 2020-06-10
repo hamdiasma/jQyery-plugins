@@ -247,7 +247,7 @@ button.from-top span:first-child {
   background-color: #fa8072;
 }
 /* start solution */
-#solution > div{
+#solution > div {
   position: relative;
 }
 #solution button.btn-effects.one {
@@ -260,6 +260,29 @@ button.from-top span:first-child {
   background-color: brown;
 }
 /* end solution */
+/* start services */
+#services .same-height {
+  overflow: hidden;
+}
+#services .same-height > div {
+  width: 30%;
+  float: left;
+  margin-right:1% ;
+   text-align: left;
+  background-color: #cac8c8;
+  padding: 10px;
+}
+/* start carts */
+.carts{
+  position: relative;
+  
+}
+.carts .cart{
+position: absolute;
+}
+/* end carts */
+
+/* end services  */
 /*start gallery */
 .gallery {
   max-width: 800px;
