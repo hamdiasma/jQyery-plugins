@@ -212,15 +212,14 @@ $(document).ready(function () {
     // chek();
   });
 
-    $(document).keydown(function (e) {
-      if (e.keyCode == 37) {
-        $(".gallery .masert-image .fa-chevron-left").click();
-      }
-      if (e.keyCode == 39) {
-        $(".gallery .masert-image .fa-chevron-right").click();
-      }
-    });
-
+  $(document).keydown(function (e) {
+    if (e.keyCode == 37) {
+      $(".gallery .masert-image .fa-chevron-left").click();
+    }
+    if (e.keyCode == 39) {
+      $(".gallery .masert-image .fa-chevron-right").click();
+    }
+  });
 
   // chek();
 
@@ -311,4 +310,37 @@ $(document).ready(function () {
     // console.log($(this).val())
     $(this).prev("span").text($(this).val());
   });
+  // detect unicode of keybord keys
+  $(".detect-unicode").on("keyup", function (e) {
+    var keybordKey = e.keyCode || e.which;
+    {
+      $(this).val().charCodeAt(0) < 200
+        ? ($(this).css("direction", "ltr"),
+          $(".astrisc").css(
+            "left",
+            $(this).parent("div").find(":input").innerWidth() - 10
+          ))
+        : ($(this).css("direction", "rtl"), $(".astrisc").css("left", "0"));
+    }
+  });
+   
+  // conver input value to tags
+  $(".add-tag").on("keyup", function (e) {
+    var keybordKey = e.keyCode || e.which;
+    if (keybordKey == 188) {
+      // cooma pressed
+      // console.log("cooma pressed")
+      var thisValue = $(this).val().slice(0, -1);
+      // console.log(thisValue);
+      $(".tags").append(
+        `<span class='tag-span'><i class='fa fa-times fa-small'></i>${thisValue}</span>`
+      );
+      $(this).val("");
+    }
+  });
+  // remove tag on click
+  $(".tags").on("click", ".tag-span i", function () {
+  $(this).parent().remove()
+  });
+  // function bounce me
 });

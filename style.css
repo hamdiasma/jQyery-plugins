@@ -246,7 +246,17 @@ button.from-top span:first-child {
 .fixed-menue .change-color [data-color="#fa8072"] {
   background-color: #fa8072;
 }
-
+/* start solution */
+#solution button.btn-effects.one {
+  background-color: seagreen;
+}
+#solution button.btn-effects.two {
+  background-color: burlywood;
+}
+#solution button.btn-effects.three {
+  background-color: brown;
+}
+/* end solution */
 /*start gallery */
 .gallery {
   max-width: 800px;
@@ -469,19 +479,20 @@ button.from-top span:first-child {
   text-align: left;
   padding-left: 20px;
 }
-.our-form input,.our-form textarea,.customize-file {
+.our-form input,
+.our-form textarea,
+.customize-file {
   margin-right: 5px;
   width: 300px;
   padding: 5px;
   border: 1px solid #ccc;
   margin-bottom: 3px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .customize-file {
- 
   position: relative;
 }
-.customize-file span{
+.customize-file span {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -502,6 +513,30 @@ button.from-top span:first-child {
   height: 100%;
   left: 0;
   z-index: 3;
+}
+.our-form .tags {
+  width: 300px;
+  max-height: 70px;
+  overflow: auto;
+  margin: 3px 0;
+}
+.our-form .tags span {
+  padding: 5px 10px;
+  background-color: #dedede;
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  border-radius: 8px;
+  color: #6f6f6f;
+}
+
+.our-form .tags span i {
+  margin-left: 1px;
+  padding-right: 2px;
+
+  cursor: pointer;
+}
+.our-form .tags span i:hover {
+  color: red;
 }
 /*end our form */
 
