@@ -310,7 +310,7 @@ button.from-top span:first-child {
 
 /* start product */
 .products {
-  width: 500px;
+  width: 60%;
   margin: 20px auto;
   overflow: hidden;
   padding: 2px;
@@ -465,22 +465,27 @@ button.from-top span:first-child {
 /* end error-message */
 /*startour form */
 .our-form {
+  background-color: rgba(0, 0, 0, 0.01);
+  text-align: left;
+  padding-left: 20px;
 }
 .our-form input {
   background-color: transparent;
-  display: block;
-  margin: 5px auto;
+  margin-right: 5px;
   width: 300px;
   padding: 5px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
+  margin-bottom: 3px;
 }
 .our-form textarea {
   width: 300px;
   padding: 5px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   background-color: transparent;
 }
-
+.our-form .msg {
+  display: none;
+}
 /*end our form */
 
 /* strat colors bidy */

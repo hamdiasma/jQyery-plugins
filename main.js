@@ -256,4 +256,10 @@ $(document).ready(function () {
     .blur(function () {
       $(this).attr("placeholder", stocplat);
     });
+    // show message filed is empty
+    $(".our-form input,.our-form textarea").not(".our-form input[type='sybmit']").blur(function(){
+      {
+        $(this).val()==""?$(this).next("span").css("color","red").fadeIn().delay(2000).fadeOut(): false
+      }
+    })
 });
