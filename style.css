@@ -469,22 +469,39 @@ button.from-top span:first-child {
   text-align: left;
   padding-left: 20px;
 }
-.our-form input {
-  background-color: transparent;
+.our-form input,.our-form textarea,.customize-file {
   margin-right: 5px;
   width: 300px;
   padding: 5px;
   border: 1px solid #ccc;
   margin-bottom: 3px;
+  background-color: #FFF;
 }
-.our-form textarea {
-  width: 300px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  background-color: transparent;
+.customize-file {
+ 
+  position: relative;
+}
+.customize-file span{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 4px;
+  z-index: 2;
 }
 .our-form .msg {
   display: none;
+}
+.our-form .customize-file input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 3;
 }
 /*end our form */
 

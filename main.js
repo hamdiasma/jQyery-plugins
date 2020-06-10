@@ -70,13 +70,13 @@ $(document).ready(function () {
       e.preventDefault();
       $(this).parentsUntil(".popup").parent().fadeOut(500);
     });
+    $(document).keydown(function (e) {
+      if (e.keyCode == 27) {
+        $(".popup").fadeOut(500);
+      }
+    });
   });
 
-  $(document).keydown(function (e) {
-    if (e.keyCode == 27) {
-      $(".popup").fadeOut(500);
-    }
-  });
   // buttons effects
   $("button.btn-effects").each(function () {
     $(this).prepend("<span></span>");
@@ -200,6 +200,7 @@ $(document).ready(function () {
     } else {
       $(".thumbnails .active").next().click();
     }
+
     // chek();
   });
   $(".gallery .masert-image .fa-chevron-left").click(function () {
@@ -210,6 +211,17 @@ $(document).ready(function () {
     }
     // chek();
   });
+
+    $(document).keydown(function (e) {
+      if (e.keyCode == 37) {
+        $(".gallery .masert-image .fa-chevron-left").click();
+      }
+      if (e.keyCode == 39) {
+        $(".gallery .masert-image .fa-chevron-right").click();
+      }
+    });
+
+
   // chek();
 
   // toggle product discription
@@ -280,5 +292,23 @@ $(document).ready(function () {
       top: 0,
       left: $(this).parent("div").find(":input").innerWidth() - 10,
     });
+  });
+  // customize the file
+  $(".our-form input[type='file']").wrap(`<div class='customize-file'></div>`);
+  $(".customize-file")
+    .css({
+      height: $(".our-form input[type='text']").innerHeight(),
+    })
+    .prepend(`<span>upload your file</span>`);
+  $(".customize-file").append(`<i class='fa fa-upload skin-color'>`);
+  $(`.fa-upload`).css({
+    position: "absolute",
+    right: "9px",
+    cursor: "pointer",
+    zIndex: 2,
+  });
+  $(".our-form input[type='file']").change(function () {
+    // console.log($(this).val())
+    $(this).prev("span").text($(this).val());
   });
 });
