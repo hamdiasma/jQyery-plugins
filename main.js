@@ -464,6 +464,9 @@ $(document).ready(function () {
     // console.log($(this).data("content"))
     $(this).addClass("active").siblings().removeClass("active");
     $(".content-list > div").hide();
-    $("."+$(this).data("content")).fadeIn();
+    $("." + $(this).data("content")).fadeIn();
+  });
+  $(".swtch-tab ").click(function () {
+    $("div.dynamic-tabs").toggleClass("left-tabs")
   });
 });

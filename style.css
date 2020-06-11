@@ -650,6 +650,40 @@ ul.tabs-list {
 .content-list > div:not(:first-child) {
   display: none;
 }
+
+.left-tabs {
+  overflow: hidden;
+}
+.left-tabs .tabs-list,
+.left-tabs .content-list {
+  float: left;
+}
+.left-tabs .tabs-list li {
+  display: block;
+  top: 0;
+  left: 1px;
+}
+.left-tabs .content-list {
+  min-height: 255px;
+  width: calc(100% - 105px);
+}
+
+.left-tabs .tabs-list li.active {
+  border-right: 1px solid #fff;
+  z-index: 2;
+}
+.swtch-tab {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1abc9c;
+  cursor: pointer;
+  border:1px solid #CCC ;
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: bold;
+
+}
 /*end dynamic table*/
 
 .customize-file span {
