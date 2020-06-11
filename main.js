@@ -379,6 +379,7 @@ $(document).ready(function () {
 
   // animate shuffle cartes
   var zIndex = 0;
+
   $(".carts .cart").click(function () {
     $(this)
       .animate(
@@ -399,5 +400,70 @@ $(document).ready(function () {
         },
         1000
       );
+  });
+
+  //blank warning created
+  function blank() {
+    $(".blink-warning").fadeOut(1000, function () {
+      $(this).fadeIn(1000);
+      blank();
+    });
+  }
+  blank();
+  // text-effect
+  var theText = $("p.type-writing-effect").data("text");
+  console.log(theText);
+  var theTextLength = theText.length;
+  var n = 0;
+  var theTyper;
+  theTyper = setInterval(function () {
+    $("p.type-writing-effect").each(function () {
+      $(this).html($(this).html() + theText[n]);
+      n++;
+      if (n >= theTextLength) {
+        clearInterval(theTyper);
+      }
+    });
+  }, 100);
+
+  // table calculate total
+  var tot = 0;
+  $("[data-price]").each(function () {
+    tot += parseInt($(this).text());
+    $(".total").text(tot);
+  });
+  // auto change Content
+
+  (function autoChange() {
+    $(".tiker-list .active").each(function () {
+      if (!$(this).is(":last-child")) {
+        $(this)
+          .delay(1000)
+          .fadeOut(1000, function () {
+            $(this)
+              .removeClass("active")
+              .next()
+              .addClass("active")
+              .fadeIn(1000);
+            autoChange();
+          });
+      } else {
+        $(this)
+          .delay(1000)
+          .fadeOut(1000, function () {
+            $(this).removeClass("active");
+            $(".tiker-list li:first-child").addClass("active").fadeIn(1000);
+            autoChange();
+          });
+      }
+    });
+  })();
+
+  // dynamic tabs
+  $(".tabs-list li").on("click", function () {
+    // console.log($(this).data("content"))
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".content-list > div").hide();
+    $("."+$(this).data("content")).fadeIn();
   });
 });

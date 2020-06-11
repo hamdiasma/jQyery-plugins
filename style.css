@@ -276,7 +276,7 @@ button.from-top span:first-child {
 .carts {
   position: relative;
   margin: 20px auto;
-  min-height: 300px;
+  min-height: 200px;
   z-index: 1;
 }
 .carts .cart {
@@ -315,8 +315,61 @@ button.from-top span:first-child {
 .carts .cart.seven {
   background-color: #0a1552;
 }
-
+.blink-warning {
+  background-color: red;
+  color: #fff;
+  border: 1px groove;
+  width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+}
 /* end carts */
+
+/* table */
+.summary {
+  width: 80%;
+  margin: 40px auto;
+  border: 1px solid;
+  text-align: left;
+}
+.summary td {
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: middle;
+}
+.summary tr:first-child td {
+  background-color: #444;
+  color: #fff;
+}
+.summary tr:last-child td:first-child {
+  text-align: right;
+}
+/* table */
+
+/*start text-ticker */
+
+.text-ticker {
+  width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.text-ticker h3 {
+  background-color: #ccc;
+  margin: 0;
+}
+.text-ticker .tiker-list {
+  list-style: none;
+  padding: 0;
+}
+.text-ticker .tiker-list li {
+  padding: 10px;
+}
+.text-ticker .tiker-list li:not(.active) {
+  display: none;
+}
+/*end text-ticker */
 
 /* end services  */
 /*start gallery */
@@ -554,6 +607,51 @@ button.from-top span:first-child {
 .customize-file {
   position: relative;
 }
+
+/*start dynamic table*/
+.dynamic-tabs {
+  width: 500px;
+  margin: auto;
+}
+ul.tabs-list {
+  margin: 0;
+}
+.tabs-list li {
+  padding: 15px 33.5px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.tabs-list li.active,
+.tabs-list li:hover {
+  color: #009688;
+}
+.tabs-list li.active {
+  border-bottom: #fff;
+  z-index: 2;
+}
+
+.content-list {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  top: -2px;
+}
+
+.content-list > div {
+  padding: 20px;
+  min-height: 100px;
+}
+.content-list > div:not(:first-child) {
+  display: none;
+}
+/*end dynamic table*/
+
 .customize-file span {
   position: absolute;
   top: 0px;
@@ -619,3 +717,7 @@ button.from-top span:first-child {
   color: #fa8072;
 }
 /* end colors bidy */
+ul {
+  list-style: none;
+  padding: 0;
+}
